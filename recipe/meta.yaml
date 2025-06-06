@@ -1,5 +1,5 @@
 {% set name = "atomai" %}
-{% set version = "0.7.8" %}
+{% set version = "0.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/atomai-{{ version }}.tar.gz
-  sha256: 79425ee60e76c5c558f9ef5cbe391c1ee8444f14c05679d3f2980d2b9359141b
+  sha256: 386a985e81dd1ac330f6bc243c33882b8edc8f68b9c48b44ce6488e623c0226e
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
