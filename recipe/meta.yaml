@@ -1,5 +1,5 @@
 {% set name = "atomai" %}
-{% set version = "0.8.0" %}
+{% set version = "0.8.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/atomai-{{ version }}.tar.gz
-  sha256: 386a985e81dd1ac330f6bc243c33882b8edc8f68b9c48b44ce6488e623c0226e
+  sha256: e7733ac866df51ea131c6c5b84a6357525d89b3ebf2c7177c4b7826e0a6e1939
 
 build:
   noarch: python
@@ -20,6 +20,7 @@ requirements:
     - pip
     - setuptools
   run:
+    - pandas >=1.1.5
     - python >={{ python_min }}
     - pytorch >=1.0.0
     - numpy >=1.18.5
